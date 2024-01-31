@@ -1,0 +1,460 @@
+body {
+  background-color: #451952;
+  display: inline;
+  overflow: scroll;
+}
+
+.menubody {
+  overflow: hidden;
+  background-color: #451952;
+  display: inline;
+}
+
+#menu {
+  align-items: center;
+  display: flex;
+  height: 70vh;
+  width: 50vw;
+}
+
+#menu-items {
+  margin-left: clamp(4rem, 20vw, 48rem);
+  position: relative;
+  z-index: 2;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+
+ #menu-background-pattern {
+  background-image: radial-gradient(
+    rgb(174, 68, 90) 9%, 
+    transparent 10%
+  );
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, 
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100vw;
+  z-index: 1;
+  opacity: 40%
+} 
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1; 
+}
+
+.menu-item {
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 5rem);
+  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  text-decoration: none;
+  transition: opacity 400ms ease;
+}
+
+#title {
+    color: white;
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    text-decoration: none;
+    padding-left: clamp(5rem, 3rem, 3rem);
+}
+
+.haha1 {
+  display: inline;
+}
+
+.menubtn {
+  display: inline; 
+  margin-left: 400px;
+  height: 4rem;
+  width: 4rem;
+  transform: translateX(-50%);
+  background-color: rgb(174, 68, 90);
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+  font-size: 20px;
+  color: white;
+
+  transition: transform, margin-left;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+
+.menubtn:hover {
+  transform: translateX(-50%) scale(1.20);
+  background-color: #F39F5A;
+
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: 200% center
+  }
+}
+
+.magic {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient( 
+    to right, 
+    #F39F5A,
+    white, 
+    #FF9F9F,
+    #F39F5A
+  );
+  background-size: 200%;
+  white-space: nowrap; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.magic1:hover {
+  animation: background-pan 1.7s linear infinite;
+  background: linear-gradient( 
+    to right, 
+    #F39F5A,
+    white, 
+    white,
+    #F39F5A
+  );
+  background-size: 200%;
+  white-space: nowrap; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.magic1 {
+  animation: background-pan 4s linear infinite;
+  background: linear-gradient( 
+    to right, 
+    #FFE382,
+    white, 
+    white,
+    #FFE382
+  );
+  background-size: 200%;
+  white-space: nowrap; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.top-caption {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  padding-left: clamp(2rem, 3vw, 3rem);
+  padding-top: clamp(2rem, 3vw, 3rem);
+
+}
+
+.order-link {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(3rem, 4vw, 4rem);
+  padding-left: clamp(2rem, 3vw, 3rem);
+  transition: transform, color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+
+.order-link:hover {
+  color: #F39F5A;
+}
+
+.copyright {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  padding-left: clamp(5rem, 3rem, 3rem);
+  margin-block-start: 0.2em;
+  margin-block-end: 0.3rem;
+}
+
+.copyright2 {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.3rem, 0.8vw, 0.8rem);
+  padding-left: clamp(5rem, 3rem, 3rem);
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+.theselection {
+  display: block; 
+}
+
+.option {
+  background-color: #F39F5A;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: inline-block;
+  width: 23%;
+  box-sizing: border-box;
+  margin: 5%;
+  margin-top: 1.6rem;
+}
+
+.image {
+  display: inline-block;
+  width: 90%;
+  box-sizing: border-box;
+
+  margin: 5%;
+  margin-top: 1.6rem;
+
+}
+
+.brac-type {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 1.5vw, 1.5rem);
+  margin-block-start: 0em;
+  margin-block-end: 0.4em;
+  text-align: center;
+}
+
+.brac-info {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  margin-block-end: 1em;
+  margin-block-start: 0.5em;
+}
+
+#title1 {
+  color: white;
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  text-decoration: none;
+  margin-left: clamp(5rem, 3rem, 3rem);
+}
+
+.available {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  padding-left: clamp(5rem, 3rem, 3rem);
+  padding-top: 2rem;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.2em;
+}
+
+.available1 {
+  color: white;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  padding-left: clamp(5rem, 5rem, 5rem);
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+.contact {
+  color: white;
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  text-decoration: none;
+  padding-left: clamp(5rem, 3rem, 3rem);
+}
+
+#othertitle {
+  display: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(4rem, 5vw, 5rem);
+  text-decoration: none;
+  padding-left: clamp(4rem, 3rem, 3rem);
+  text-align: center;
+}
+
+#menutitle {
+  display: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 5rem);
+  text-decoration: none;
+  text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.othermenubtn {
+  display: none;
+  height: 4rem;
+  width: 4rem;
+  transform: translateX(-50%);
+  background-color: rgb(174, 68, 90);
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+  font-size: 20px;
+  color: white;
+  position: fixed;
+
+  transition: transform;
+  transition-timing-function: ease;
+  transition-duration: 400ms; 
+}
+
+.othermenubtn:hover {
+  transform: translateX(-50%) scale(1.20);
+  background-color: #F39F5A;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1450px) {
+  .menubtn {
+    margin-left: 100px;
+    transition: transform, margin-left;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .option {
+    width: 35%
+  }
+  
+  .menubtn {
+    margin-left: 50px;
+  }
+
+  .brac-info {
+    font-size: clamp(1.5rem, 1.5vw, 1.5rem);
+  }
+
+  .menu-item {
+    font-size: 4rem;
+    transition: transform, font-size ;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+  }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+  .option {
+    width: 70%; 
+    margin-left: 15%;
+  }
+
+  .image { 
+    max-width: 400px;
+  }
+
+  .menubtn {
+    display: none;
+  }
+
+  #title {
+    display: none;
+  }
+  
+  #othertitle {
+    display: inline;
+  }
+
+  .copyright {
+    padding-left: clamp(4rem, 3rem, 3rem);
+  }
+
+  .copyright2 {
+    padding-left: clamp(4rem, 3rem, 3rem);
+  }
+
+  .available {
+    padding-left: clamp(4rem, 3rem, 3rem);
+  }
+  .available1 {
+    padding-left: clamp(4rem, 3rem, 3rem);
+  }
+
+  .contactdiv {
+    padding-left: clamp(4rem, 3rem, 3rem);
+  }
+
+
+  .brac-info {
+    font-size: clamp(2rem, 2vw, 2rem);
+  }
+
+  .othermenubtn {
+    display: inline;
+  }
+
+  #menutitle {
+    display: block;
+  }
+
+  .contact {
+    padding-left:0;
+  }
+
+  .menu-item {
+    font-size: 4rem;
+  }
+} 
